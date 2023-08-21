@@ -9,7 +9,7 @@ export const signin = async (req, res, next) => {
     if (!user) return next(handleError(404, "User not found"));
     const isCorrect = await bcrypt.compare(req.body.password, user.password);
     if (!isCorrect) return next(handleError(400, "Wrong password"));
-    const token = jwt.sign({ id: user._id }, process.env.JWT);
+    const token = jwt.sign({ id: user._id }, "s1e2c3r4e5t6");
     const { password, ...othersData } = user._doc;
     res
       .cookie("access_token", token, { httpOnly: true })
