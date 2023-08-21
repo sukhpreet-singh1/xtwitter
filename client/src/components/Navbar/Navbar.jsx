@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import StarBorderPurple500Icon from "@mui/icons-material/StarBorderPurple500";
-import SearchIcon from "@mui/icons-material/Search";
 
 import { useLocation } from "react-router-dom";
 import UserPlaceholder from "../UserPlaceholder/UserPlaceholder";
@@ -10,7 +8,7 @@ const Navbar = () => {
   const location = useLocation().pathname;
 
   return (
-    <div className="grid grid-cols-1 fixed md:grid-cols-4 my-5 justify-center">
+    <div className="grid grid-cols-1 pl-3 fixed md:grid-cols-4 my-5 justify-center">
       <div className="mx-auto md:mx-0">
         <img
           src="/xtwitter.png"
@@ -20,9 +18,9 @@ const Navbar = () => {
         />
       </div>
 
-      <div className="col-span-2 md:border-x-2 md:border-gray-50 md:px-6 my-6 md:my-0">
+      <div className="col-span-2 absolute left-96  md:px-6 my-6 md:my-0">
         <div className="flex justify-between items-center">
-          <h2 className="font-bold pl-2 text-2xl">
+          <h2 className="font-bold text-2xl">
             {location.includes("profile") ? (
               <UserPlaceholder setUserData={setUserData} userData={userData} />
             ) : location.includes("explore") ? (
@@ -31,13 +29,7 @@ const Navbar = () => {
               "Home"
             )}
           </h2>
-          <StarBorderPurple500Icon />
         </div>
-      </div>
-
-      <div className="px-0 md:px-6 mx-auto">
-        <SearchIcon className="absolute m-2" />
-        <input type="text" className="bg-gray-50 rounded-full py-2 px-8" />
       </div>
     </div>
   );
