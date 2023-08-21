@@ -18,7 +18,7 @@ const LeftSidebar = () => {
   };
 
   return (
-    <div className="flex flex-col fixed top-14 h-full md:h-[90vh] justify-between mr-6">
+    <div className="flex flex-col fixed top-20 h-full md:h-[90vh] justify-between mr-6">
       <div className="mt-6 flex flex-col space-y-4">
         <Link to="/">
           <div className="flex items-center space-x-6 px-2 py-2 hover:bg-gray-50 rounded-full cursor-pointer">
