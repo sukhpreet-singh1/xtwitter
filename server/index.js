@@ -46,8 +46,6 @@ app.use("/api/auth", async (req, res, next) => {
 );
 app.use("/api/tweets", tweetRoutes);
 app.use("/api/users", userRoutes);
-
-
 app.listen(8000, () => {
   connect();
   console.log("Listening to port 8000");
