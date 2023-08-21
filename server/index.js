@@ -29,6 +29,11 @@ app.use("/api/auth", authRoutes);
 app.use("/api/tweets", tweetRoutes);
 app.use("/api/users", userRoutes);
 
+app.use("/", (req, res) => {
+  res.json({ message: "hello world" });
+});
+
+
 app.listen(process.env.PORT || 8000, () => {
   connect();
   console.log("Listening to port 8000");
