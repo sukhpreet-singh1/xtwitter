@@ -49,7 +49,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="bg-black absolute right-0 top-0 w-screen text-white">
+    <div className="bg-black absolute h-100 right-0 top-0 w-screen text-white">
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
