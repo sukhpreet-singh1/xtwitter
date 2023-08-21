@@ -6,8 +6,8 @@ const Authform = ({ currentForm }) => {
   const [activeForm, setActiveForm] = useState(currentForm);
 
   return (
-    <div className="flex justify-center items-center pt-10">
-      <div className="p-8 shadow-md bg-black rounded-md w-96 h-1/2">
+    <div className="flex justify-center h-screen bg-gray-50 items-center">
+      <div className="p-8 shadow-md bg-black rounded-md w-96">
         <div className="flex justify-between mb-4">
           <img src="/xtwitter.png" alt="X" className="w-7 h-7" />
           <div>
