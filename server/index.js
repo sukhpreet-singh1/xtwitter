@@ -13,7 +13,7 @@ dotenv.config();
 const connect = () => {
   mongoose.set("strictQuery", false);
   mongoose
-    .connect(process.env.MONGO_URL)
+    .connect('mongodb+srv://tdhruv9781:Tdhruv123@cluster0.pkejjee.mongodb.net/?retryWrites=true&w=majority')
     .then(() => {
       console.log("connect to mongodb database");
     })
@@ -28,13 +28,11 @@ app.use(cookieParser());
 app.use("/api/auth", authRoutes);
 app.use("/api/tweets", tweetRoutes);
 app.use("/api/users", userRoutes);
-
-app.use("/", (req, res) => {
-  res.json({ message: "hello world" });
+app.use("/api", (req, res) => {
+  res.json({ messsage: "helloasdv" });
 });
 
-
-app.listen(process.env.PORT || 8000, () => {
+app.listen(8000, () => {
   connect();
   console.log("Listening to port 8000");
 });
