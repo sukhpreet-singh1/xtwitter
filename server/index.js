@@ -42,7 +42,7 @@ app.use("/api/auth", async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-};
+}
 );
 app.use("/api/tweets", tweetRoutes);
 app.use("/api/users", userRoutes);
